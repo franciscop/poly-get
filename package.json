@@ -1,6 +1,6 @@
 {
   "name": "poly-get",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A tiny fetch() universal library for getting JSON",
   "homepage": "https://github.com/franciscop/poly-get#readme",
   "repository": "https://github.com/franciscop/poly-get.git",
