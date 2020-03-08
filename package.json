@@ -22,6 +22,7 @@
     "workers"
   ],
   "main": "index.min.js",
+  "type": "module",
   "files": [],
   "dependencies": {},
   "devDependencies": {
