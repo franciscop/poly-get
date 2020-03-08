@@ -13,6 +13,11 @@ console.log(todo);
 It is so small that you can just copy/paste it in your code:
 
 ```js
+// poly-get - A tiny fetch() universal library for getting JSON by francisco.io
+export default async(e,r={})=>{if("undefined"!=typeof fetch){const t=await fetch(e,r);if(!t.ok)throw new Error(`Error ${t.status} retrieving ${e}`);return t.json()}if("undefined"!=typeof require)return new Promise((t,o)=>{require("https").get(e,r,r=>{if(r.setEncoding("utf8"),r.statusCode<200||r.statusCode>=300)return o(new Error(`Error ${r.statusCode} retrieving ${e}`));let n="";r.on("data",e=>n+=e),r.on("end",()=>t(JSON.parse(n)))}).on("error",o)});throw new Error("fetch() is not available, please polyfill it")};
+```
+
+```js
 // Make a GET HTTP response and parse the JSON response
 export default async (url, options = {}) => {
   // Try first with fetch() - browser, worker, polyfilled, etc

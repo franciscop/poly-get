@@ -5,7 +5,8 @@ export default {
   input: "index.js",
   output: {
     file: "index.min.js",
-    format: "esm"
+    name: "get",
+    format: "umd"
   },
   plugins: [nodeResolve({ preferBuiltins: true }), terser()]
 };
